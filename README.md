@@ -21,33 +21,33 @@ Fork this repository, update this file to include your answers, and submit a pul
 
 ### Controllers
 
-6. My app is telling me there's an error in the `BunniesController`. What directory and filename should I look in?
+1. My app is telling me there's an error in the `BunniesController`. What directory and filename should I look in?
 
 
-7. I'm in the `show` action of my `BunniesController` and I have the ID of a specific bunny in `params[:id]`. What line should I type to find the bunny with the correct ID, and assign it to a variable that my view can access?
+2. I'm in the `show` action of my `BunniesController` and I have the ID of a specific bunny in `params[:id]`. What line should I type to find the bunny with the correct ID, and assign it to a variable that my view can access?
 
 
-8. I tried to update a bunny with the code `bunny.update(params[:bunny])`, but it gave me a "forbidden attributes error". Why is it telling me this, and what should I do (broadly speaking, no exact code needed) to fix the problem?
+3. I tried to update a bunny with the code `bunny.update(params[:bunny])`, but it gave me a "forbidden attributes error". Why is it telling me this, and what should I do (broadly speaking, no exact code needed) to fix the problem?
 
 
-9. When I create or update a bunny in my controller, how can I find out whether the bunny saved successfully?
+4. When I create or update a bunny in my controller, how can I find out whether the bunny saved successfully?
 
 
-10. Assuming my bunny saved successfully, what code should I write to redirect the user to the "show" page for the bunny, with a flash message indicating success?
+5. Assuming my bunny saved successfully, what code should I write to redirect the user to the "show" page for the bunny, with a flash message indicating success?
 
 
 ### Routes/Views
 
-11. What line should I add to `config/routes.rb` to create a complete set of RESTful routes for a "bunnies" resource?
+1. What line should I add to `config/routes.rb` to create a complete set of RESTful routes for a "bunnies" resource?
 
 
-12. My app is telling me there's an error in the "show" view for bunnies. What directory and filename would that be located in?
+2. My app is telling me there's an error in the "show" view for bunnies. What directory and filename would that be located in?
 
 
-13. I'm in the `index.html.erb` view and I've assigned a variable `@bunnies` to a collection of all my bunnies. What HTML/ERB code should I write to create an unordered list that shows each bunny's `name` attribute?
+3. I'm in the `index.html.erb` view and I've assigned a variable `@bunnies` to a collection of all my bunnies. What HTML/ERB code should I write to create an unordered list that shows each bunny's `name` attribute?
 
 
-14. In one of my views, I want to create a link to the "show" path for a specific bunny that I have stored in the variable `bunny`. `rake routes` tells me that I have a standard `bunny_path` helper available. How do I create this link?
+4. In one of my views, I want to create a link to the "show" path for a specific bunny that I have stored in the variable `bunny`. `rake routes` tells me that I have a standard `bunny_path` helper available. How do I create this link?
 
 
-15. I've created a view partial called `_form.html.erb` and I want to render this partial into my "new" view. What HTML/ERB code should I write to do this?
+5. I've created a view partial called `_form.html.erb` and I want to render this partial into my "new" view. What HTML/ERB code should I write to do this?
