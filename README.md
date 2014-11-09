@@ -18,10 +18,14 @@ $ rake db:migrate
 3. My app has a `Bunny` model, and I want to find bunnies whose `color` attribute is `'white'`, sorted by their `name` attribute. What code should I write to do that?
 
 Bunny.find_by(color: 'white').order(:name)
+(wrong)
+Answer: Bunny.where(color: 'white').order(:name)
 
 4. Now I want to find the specific bunny whose name is `'George'` (names are unique, so there should be only one).
 
 Bunny.where(name: "George")
+(wrong)
+Answer: Bunny.find_by(name: 'George')
 
 5. I want to make sure nobunny, er, I mean nobody, can create a bunny without a name. What code should I add to my `Bunny` model to validate this?
 
@@ -45,6 +49,8 @@ You have to specifically allow updating that attribute by creating a bunny_param
 4. When I create or update a bunny in my controller, how can I find out whether the bunny saved successfully?
 
 In the console type Bunny.saved, which will return true or false
+(wrong)
+Answer: if @bunny.save
 
 5. Assuming my bunny saved successfully, what code should I write to redirect the user to the "show" page for the bunny, with a flash message indicating success?
 
@@ -59,7 +65,7 @@ resources :bunnies
 
 2. My app is telling me there's an error in the "show" view for bunnies. What directory and filename would that be located in?
 
-app-views-bunnies-how.html.erb
+app-views-bunnies-show.html.erb
 
 3. I'm in the `index.html.erb` view and I've assigned a variable `@bunnies` to a collection of all my bunnies. What HTML/ERB code should I write to create an unordered list that shows each bunny's `name` attribute?
 
@@ -72,6 +78,8 @@ app-views-bunnies-how.html.erb
 4. In one of my views, I want to create a link to the "show" path for a specific bunny that I have stored in the variable `bunny`. `rake routes` tells me that I have a standard `bunny_path` helper available. How do I create this link?
 
 :(
+(wrong)
+Answer: link_to 'bunny', bunny_path(bunny)
 
 5. I've created a view partial called `_form.html.erb` and I want to render this partial into my "new" view. What HTML/ERB code should I write to do this?
 
